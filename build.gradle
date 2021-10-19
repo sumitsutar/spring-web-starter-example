@@ -5,8 +5,8 @@ plugins {
 	id "pl.allegro.tech.build.axion-release" version "1.13.2"
 	id "jacoco"
 }
-group = 'com.github.sumitsutar.exercises'
 
+group = 'com.github.sumitsutar.exercises'
 
 scmVersion {
 	versionCreator "versionWithBranch"
@@ -14,7 +14,6 @@ scmVersion {
 		prefix = "spring-web-starter-example"
 	}
 }
-
 
 version = scmVersion.version
 
