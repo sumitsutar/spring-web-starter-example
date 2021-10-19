@@ -1,7 +1,7 @@
-package com.github.sumitsutar.exercises.spingwebstarterexample.services;
+package com.github.sumitsutar.exercises.springwebstarterexample.services;
 
-import com.github.sumitsutar.exercises.spingwebstarterexample.api.Car;
-import com.github.sumitsutar.exercises.spingwebstarterexample.data.CarDAO;
+import com.github.sumitsutar.exercises.springwebstarterexample.api.Car;
+import com.github.sumitsutar.exercises.springwebstarterexample.data.CarDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

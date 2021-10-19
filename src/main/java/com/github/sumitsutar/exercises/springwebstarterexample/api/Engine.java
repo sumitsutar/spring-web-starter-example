@@ -1,4 +1,4 @@
-package com.github.sumitsutar.exercises.spingwebstarterexample.api;
+package com.github.sumitsutar.exercises.springwebstarterexample.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

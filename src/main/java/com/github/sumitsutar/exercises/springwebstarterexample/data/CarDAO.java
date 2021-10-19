@@ -1,9 +1,9 @@
-package com.github.sumitsutar.exercises.spingwebstarterexample.data;
+package com.github.sumitsutar.exercises.springwebstarterexample.data;
 
-import com.github.sumitsutar.exercises.spingwebstarterexample.api.Car;
-import com.github.sumitsutar.exercises.spingwebstarterexample.api.Engine;
-import com.github.sumitsutar.exercises.spingwebstarterexample.api.EngineType;
-import com.github.sumitsutar.exercises.spingwebstarterexample.api.Manufacturer;
+import com.github.sumitsutar.exercises.springwebstarterexample.api.Car;
+import com.github.sumitsutar.exercises.springwebstarterexample.api.Engine;
+import com.github.sumitsutar.exercises.springwebstarterexample.api.EngineType;
+import com.github.sumitsutar.exercises.springwebstarterexample.api.Manufacturer;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;

@@ -10,6 +10,9 @@ group = 'com.github.sumitsutar.exercises'
 
 scmVersion {
 	versionCreator "versionWithBranch"
+	tag {
+		prefix = "spring-web-starter-example"
+	}
 }
 
 
