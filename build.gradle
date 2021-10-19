@@ -13,6 +13,7 @@ scmVersion {
 	tag {
 		prefix = "spring-web-starter-example"
 	}
+	separator = '-'
 }
 
 version = scmVersion.version
