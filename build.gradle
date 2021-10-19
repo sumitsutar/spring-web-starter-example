@@ -1,0 +1,47 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id "pl.allegro.tech.build.axion-release" version "1.13.2"
+	id "jacoco"
+}
+
+scmVersion {
+	versionCreator "versionWithBranch"
+}
+
+allprojects {
+	group = 'com.github.sumitsutar.exercises'
+	sourceCompatibility = '1.8'
+	repositories {
+		mavenCentral()
+	}
+	apply plugin: "idea"
+	project.version = scmVersion.version
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+jacocoTestReport {
+	dependsOn test
+	sourceSets sourceSets.main
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	//to test POJO classes
+	testImplementation 'org.force66:BeanTester:1.0.1-rc1'
+}
+
+test {
+	useJUnitPlatform()
+}
