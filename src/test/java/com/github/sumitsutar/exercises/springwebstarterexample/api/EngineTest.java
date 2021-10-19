@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class EngineTest {
 
     @Test
-    public void testEngine() {
+    void testEngine() {
         BeanTester beanTester = new BeanTester();
         beanTester.testBean(Engine.class);
     }

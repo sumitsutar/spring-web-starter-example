@@ -20,7 +20,7 @@ public class CarsControllerTest {
     CarsController carsController;
 
     @Test
-    public void testGetAllCars() {
+    void testGetAllCars() {
         List<Car> cars= carsController.getAllCars();
         assertNotNull(cars);
     }

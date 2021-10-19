@@ -10,7 +10,7 @@ public class CarDAOTest {
     CarDAO carDAO = new CarDAO();
 
     @Test
-    public void testRetrieveAllCars() {
+    void testRetrieveAllCars() {
         assertNotNull(carDAO.retrieveAllCars());
     }
 }

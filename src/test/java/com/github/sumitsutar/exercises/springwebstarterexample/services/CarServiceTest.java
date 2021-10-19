@@ -30,7 +30,7 @@ public class CarServiceTest {
     CarDAO carDAO;
 
     @Test
-    public void testGetAllCars() {
+    void testGetAllCars() {
         when(carDAO.retrieveAllCars()).thenReturn(getCars());
         assertNotNull(carService.getAllCars());
         assertEquals(2, carService.getAllCars().size());

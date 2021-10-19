@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class CarTest {
 
     @Test
-    public void testCar() {
+    void testCar() {
         BeanTester beanTester = new BeanTester();
         beanTester.addExcludedField("launchDate");
         beanTester.testBean(Car.class);
