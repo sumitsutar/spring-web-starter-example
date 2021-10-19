@@ -12,8 +12,8 @@ scmVersion {
 	versionCreator "versionWithBranch"
 	tag {
 		prefix = "spring-web-starter-example"
+		separator = '-'
 	}
-	separator = '-'
 }
 
 version = scmVersion.version
