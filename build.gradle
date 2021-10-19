@@ -4,6 +4,7 @@ plugins {
 	id 'java'
 	id "pl.allegro.tech.build.axion-release" version "1.13.2"
 	id "jacoco"
+	id "org.sonarqube" version "3.3"
 }
 
 group = 'com.github.sumitsutar.exercises'
@@ -20,22 +21,42 @@ scmVersion {
 project.version = scmVersion.version
 archivesBaseName = "spring-web-starter-example"
 
-sourceCompatibility = '1.8'
-
+sourceCompatibility = 17
+targetCompatibility = 17
 
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
 }
-
 repositories {
 	mavenCentral()
 }
+
+
 jacocoTestReport {
 	dependsOn test
 	sourceSets sourceSets.main
+	executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+	reports {
+		xml.enabled true
+		xml.destination file("${buildDir}/reports/jacoco/report.xml")
+		html.enabled false
+		csv.enabled false
+	}
 }
+
+project.tasks["sonarqube"].dependsOn jacocoTestReport
+
+sonarqube {
+	properties {
+		property "sonar.projectKey", "sumitsutar_spring-web-starter-example"
+		property "sonar.organization", "sumitsutar"
+		property "sonar.host.url", "https://sonarcloud.io"
+		property "sonar.coverage.jacoco.xmlReportPaths", "${project.buildDir}/reports/jacoco/report.xml"
+	}
+}
+
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -47,6 +68,8 @@ dependencies {
 	//to test POJO classes
 	testImplementation 'org.force66:BeanTester:1.0.1-rc1'
 }
+
+
 
 test {
 	useJUnitPlatform()
