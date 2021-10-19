@@ -10,13 +10,15 @@ group = 'com.github.sumitsutar.exercises'
 
 scmVersion {
 	versionCreator "versionWithBranch"
+	useHighestVersion = true
 	tag {
 		prefix = "spring-web-starter-example"
-		separator = '-'
+		versionSeparator = '-'
 	}
 }
 
-version = scmVersion.version
+project.version = scmVersion.version
+archivesBaseName = "spring-web-starter-example"
 
 sourceCompatibility = '1.8'
 
