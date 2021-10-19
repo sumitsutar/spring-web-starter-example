@@ -27,9 +27,9 @@ jobs:
       #run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Print Current Version
-      run: ./gradlew currentVersion -q -Prelease.quiet
-    - name: Release
-      run: ./gradlew release -Prelease.customUsername=${{ github.actor }} -Prelease.customPassword=${{ github.token }}
-    - name: Print New Version
-      run: ./gradlew currentVersion -q -Prelease.quiet
+#     - name: Print Current Version
+#       run: ./gradlew currentVersion -q -Prelease.quiet
+#     - name: Release
+#       run: ./gradlew release -Prelease.customUsername=${{ github.actor }} -Prelease.customPassword=${{ github.token }}
+#     - name: Print New Version
+#       run: ./gradlew currentVersion -q -Prelease.quiet
