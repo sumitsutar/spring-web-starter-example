@@ -5,19 +5,20 @@ plugins {
 	id "pl.allegro.tech.build.axion-release" version "1.13.2"
 	id "jacoco"
 }
+group = 'com.github.sumitsutar.exercises'
+
 
 scmVersion {
 	versionCreator "versionWithBranch"
 }
 
+
+version = scmVersion.version
+
+sourceCompatibility = '1.8'
+
 allprojects {
-	group = 'com.github.sumitsutar.exercises'
-	sourceCompatibility = '1.8'
-	repositories {
-		mavenCentral()
-	}
 	apply plugin: "idea"
-	project.version = scmVersion.version
 }
 
 configurations {
@@ -26,6 +27,9 @@ configurations {
 	}
 }
 
+repositories {
+	mavenCentral()
+}
 jacocoTestReport {
 	dependsOn test
 	sourceSets sourceSets.main
