@@ -28,6 +28,9 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew clean build
     - name: SonarQube
+      env:
+          GITHUB_TOKEN: ${{ github.token }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: ./gradlew sonarqube
 #     - name: Release
 #       run: ./gradlew release -Prelease.customUsername=${{ github.actor }} -Prelease.customPassword=${{ github.token }}
