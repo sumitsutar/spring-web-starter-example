@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpingWebStarterExampleApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpingWebStarterExampleApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpingWebStarterExampleApplication.class, args);
+    }
 
 }
